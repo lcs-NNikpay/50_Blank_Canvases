@@ -12,7 +12,7 @@
 import Cocoa
 import PlaygroundSupport
 
-// Create canvas
+// Create canvas x
 let canvas = Canvas(width: 500 , height: 500)
 
 /*:
