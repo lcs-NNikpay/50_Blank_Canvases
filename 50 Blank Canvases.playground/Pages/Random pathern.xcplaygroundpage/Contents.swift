@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500 , height: 500)
 
 /*:
  ## Add your code below
@@ -23,7 +23,37 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+canvas.fillColor=Color.white
+for x in stride(from: 25, through: 475, by: 50) {
+    for y in stride(from: 475, through: 25, by: -50) {
+        canvas.drawEllipse(centreX: x, centreY: y, width: 25, height: 25, borderWidth: 10)
+        
+    }
+}
 
+//Black circles
+canvas.fillColor = Color.black
+for x in stride(from: 30, through: 475, by: 50) {
+    for y in stride(from: 485, through: 25, by: -50) {
+        let bo = random(from: 1, toButNotIncluding: 5)
+        if bo == 1 {
+            canvas.translate(byX: 2, byY: 0)
+            if bo == 2 {
+                canvas.translate(byX: -2, byY: 0)
+                    if bo == 3{
+                        canvas.translate(byX: 0, byY: 2)
+                            if bo == 4{
+                                canvas.translate(byX: 0, byY: -2)
+                        }
+                }
+            }
+        }
+
+        canvas.drawEllipse(centreX: x, centreY: y, width: 25, height: 25, borderWidth: 10)
+
+        
+    }
+}
 
 
 /*:
